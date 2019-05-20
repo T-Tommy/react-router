@@ -2,14 +2,14 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import sizingCSS from './color.css';
 
-function AnyColor({ match }) {
+function Color({ match: { params: { color } } }) {
   return (
-    <div style={ { background: match.params.color } } className={ sizingCSS.div }></div>
+    <div style={ { background: color } } className={ sizingCSS.div }></div>
   );
 }
 
-AnyColor.propTypes = {
+Color.propTypes = {
   match: PropTypes.object.isRequired
 };
 
-export default AnyColor;
+export default Color;
